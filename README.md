@@ -1,58 +1,40 @@
-# Svelte library
+# HeroIcons for Svelte
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A collection of Svelte components for Heroicons, a set of free MIT-licensed high-quality SVG icons by TailwindLabs https://github.com/tailwindlabs/heroicons
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Installation
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+npm install casterlabs-heroicons-svelte
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```javascript
+<script>
+    import IconAcademicCap from 'casterlabs-heroicons-svelte';
+</script>
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+<IconAcademicCap theme="outline" />
+<IconAcademicCap theme="solid" />
+<IconAcademicCap theme="mini" />
+<IconAcademicCap theme="micro" />
 ```
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+And that's it!
 
-## Building
+## Customization
 
-To build your library:
+Each SVG has already been rewritten to use `currentColor` for their fill/stroke. You can target an icon using the following CSS:
 
-```bash
-npm run package
+```css
+svg[data-icon='academic-cap'] {
+	/* Custom CSS here! */
+}
 ```
 
-To create a production version of your showcase app:
+The following attributes are available:
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
+- `[data-type="svelte-heroicons"]`
+- `[data-icon="NAME"]`
+- `[data-theme="THEME"]`
