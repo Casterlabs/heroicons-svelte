@@ -9,6 +9,7 @@
 		"email": "support@casterlabs.co"
 	},
 	"scripts": {
+		"generate": "node generate.js",
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
 		"preview": "vite preview",

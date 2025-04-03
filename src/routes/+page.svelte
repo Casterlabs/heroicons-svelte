@@ -1,3 +1,27 @@
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import { ICONS, type IconTheme } from '$lib/index.js';
+
+	let theme: IconTheme = $state('outline');
+	let customColor = $state('#000000');
+</script>
+
+Theme: <select bind:value={theme}>
+	<option value="outline">Outline</option>
+	<option value="solid">Solid</option>
+	<option value="mini">Mini</option>
+	<option value="micro">Micro</option>
+</select>
+<br />
+Custom Color: <input type="color" bind:value={customColor} />
+
+<br />
+<br />
+<br />
+
+<div style:color={customColor}>
+	{#each ICONS as icon}
+		{#await import(`$lib/heroicons/${icon}.svelte`) then imported}
+			<imported.default {theme} />
+		{/await}
+	{/each}
+</div>

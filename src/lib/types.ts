@@ -1,6 +1,5 @@
-export declare type Theme = 'outline' | 'solid' | 'mini' | 'micro';
+export declare type IconTheme = 'outline' | 'solid' | 'mini' | 'micro';
 
 export interface IconProps {
-	theme?: Theme;
-	additionalProperties?: Record<string, any>;
+	theme?: IconTheme;
 }
