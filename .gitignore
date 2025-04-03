@@ -25,3 +25,5 @@ vite.config.ts.timestamp-*
 
 # Hero Icons
 /heroicons
+/src/lib/heroicons
+/src/lib/index.ts
