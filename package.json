@@ -8,6 +8,10 @@
 		"url": "https://casterlabs.co",
 		"email": "support@casterlabs.co"
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Casterlabs/heroicons-svelte.git"
+	},
 	"scripts": {
 		"generate": "node generate.js",
 		"dev": "vite dev",
