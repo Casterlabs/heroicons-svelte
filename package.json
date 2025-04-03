@@ -1,6 +1,6 @@
 {
 	"name": "heroicons-svelte",
-	"version": "1.0.0",
+	"version": "2.2.0",
 	"license": "MIT",
 	"description": "A collection of Svelte components for Heroicons, a set of free MIT-licensed high-quality SVG icons by TailwindLabs https://github.com/tailwindlabs/heroicons",
 	"author": {
