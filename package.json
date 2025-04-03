@@ -1,5 +1,5 @@
 {
-	"name": "casterlabs-heroicons-svelte",
+	"name": "@casterlabs/heroicons-svelte",
 	"version": "2.2.0",
 	"license": "MIT",
 	"description": "A collection of Svelte components for Heroicons, a set of free MIT-licensed high-quality SVG icons by TailwindLabs https://github.com/tailwindlabs/heroicons",
@@ -13,6 +13,7 @@
 		"url": "git+https://github.com/Casterlabs/heroicons-svelte.git"
 	},
 	"scripts": {
+		"publish": "npm publish --access public",
 		"generate": "node generate.js",
 		"dev": "npm run generate && vite dev",
 		"build": "npm run generate && vite build && npm run prepack",
