@@ -5,14 +5,14 @@ A collection of Svelte components for Heroicons, a set of free MIT-licensed high
 ## Installation
 
 ```bash
-npm install casterlabs-heroicons-svelte
+npm install @casterlabs/heroicons-svelte
 ```
 
 ## Usage
 
 ```javascript
 <script>
-    import IconAcademicCap from 'casterlabs-heroicons-svelte';
+    import IconAcademicCap from '@casterlabs/heroicons-svelte';
 </script>
 
 <IconAcademicCap theme="outline" />
