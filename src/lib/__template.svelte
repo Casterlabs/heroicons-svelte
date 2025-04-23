@@ -3,7 +3,7 @@
 
 	import type { IconTheme, IconProps } from '$lib/types.js';
 
-	let { theme = 'outline' }: IconProps = $props();
+	let { theme = 'outline', class: cssClass, style: cssStyle }: IconProps = $props();
 
 	export const NAME = `%NAME%`;
 
@@ -13,6 +13,20 @@
 		mini: `%MINI_SVG%`,
 		micro: `%MICRO_SVG%`
 	};
+
+	function htmlEscape(text?: string): string {
+		if (!text) {
+			return '';
+		}
+		return text
+			.replaceAll('&', '&amp;')
+			.replaceAll('<', '&lt;')
+			.replaceAll('>', '&gt;')
+			.replaceAll('"', '&quot;')
+			.replaceAll("'", '&#39;');
+	}
 </script>
 
-{@html SVGS[theme]}
+{@html SVGS[theme] //
+	.replace('%class%', htmlEscape(cssClass))
+	.replace('%style%', htmlEscape(cssStyle))}

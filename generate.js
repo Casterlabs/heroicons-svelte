@@ -93,7 +93,9 @@ for (const [filename, icon] of Object.entries(iconData)) {
 			'data-type': 'svelte-heroicons',
 			'data-icon': rawName,
 			'data-theme': theme,
-			'aria-hidden': 'true'
+			'aria-hidden': 'true',
+			class: '%class%',
+			style: '%style%'
 		})
 			.map(([key, value]) => `${key}="${value}"`)
 			.join(' ');

@@ -33,6 +33,16 @@ svg[data-icon='academic-cap'] {
 }
 ```
 
+Or, you can use the `class` and `style` attributes:
+
+```javascript
+<script>
+    import IconAcademicCap from '@casterlabs/heroicons-svelte';
+</script>
+
+<IconAcademicCap theme="micro" class="my-custom-class" style="transform: rotate(45deg);" />
+```
+
 The following attributes are available:
 
 - `[data-type="svelte-heroicons"]`
