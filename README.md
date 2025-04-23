@@ -23,6 +23,20 @@ npm install @casterlabs/heroicons-svelte
 
 And that's it!
 
+You can also lookup the component in a map:
+
+```javascript
+<script lang="ts">
+	import { ICONS } from '$lib/index.js';
+
+	const ChosenIcon = ICONS['academic-cap'];
+</script>
+
+<ChosenIcon theme="outline" />
+```
+
+This is useful for dynamic UIs where it's not feasible to pass a reference to a component.
+
 ## Customization
 
 Each SVG has already been rewritten to use `currentColor` for their fill/stroke. You can target an icon using the following CSS:
