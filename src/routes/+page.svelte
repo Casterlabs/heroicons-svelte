@@ -3,6 +3,7 @@
 
 	let theme: IconTheme = $state('outline');
 	let customColor = $state('#000000');
+	let customStyle = $state('');
 </script>
 
 Theme: <select bind:value={theme}>
@@ -13,15 +14,15 @@ Theme: <select bind:value={theme}>
 </select>
 <br />
 Custom Color: <input type="color" bind:value={customColor} />
+<br />
+Custom Style: <input type="input" bind:value={customStyle} />
 
 <br />
 <br />
 <br />
 
 <div style:color={customColor}>
-	{#each ICONS as icon}
-		{#await import(`$lib/heroicons/${icon}.svelte`) then imported}
-			<imported.default {theme} />
-		{/await}
+	{#each Object.values(ICONS) as Icon}
+		<Icon {theme} style={customStyle} />
 	{/each}
 </div>
